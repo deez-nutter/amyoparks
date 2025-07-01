@@ -1,0 +1,35 @@
+# Ignore sensitive files
+includes/db.php
+config/database.php
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.log
+
+# Ignore vendor directories
+vendor/
+node_modules/
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Ignore temporary files
+*.tmp
+*.bak
+*~
+
+# Ignore uploads and cache
+uploads/
+cache/
+temp/
+
+# Ignore database dumps (optional - remove if you want to track them)
+# *.sql
+
+# Ignore debug files
+debug_*.php
+test_*.php

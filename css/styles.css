@@ -1,0 +1,206 @@
+/* Custom styles for AmyO Parks */
+
+/* Loading spinner */
+.spinner {
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #10B981;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom form styles */
+.form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+}
+
+.form-select {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white;
+}
+
+.form-textarea {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-vertical;
+}
+
+.btn-primary {
+    @apply bg-primary hover:bg-accent text-white font-bold py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.btn-secondary {
+    @apply bg-secondary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+}
+
+.btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+}
+
+.btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+/* Card styles */
+.card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.card-header {
+    @apply px-6 py-4 bg-gray-50 border-b border-gray-200;
+}
+
+.card-body {
+    @apply px-6 py-4;
+}
+
+.card-footer {
+    @apply px-6 py-4 bg-gray-50 border-t border-gray-200;
+}
+
+/* Table styles */
+.table {
+    @apply min-w-full divide-y divide-gray-200;
+}
+
+.table th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50;
+}
+
+.table td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+.table tbody tr:nth-child(even) {
+    @apply bg-gray-50;
+}
+
+.table tbody tr:hover {
+    @apply bg-gray-100;
+}
+
+/* Pagination styles */
+.pagination {
+    @apply flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6;
+}
+
+.pagination-info {
+    @apply text-sm text-gray-700;
+}
+
+.pagination-nav {
+    @apply flex space-x-2;
+}
+
+.pagination-btn {
+    @apply relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.pagination-btn.active {
+    @apply bg-primary text-white border-primary hover:bg-accent;
+}
+
+.pagination-btn:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+/* Alert styles */
+.alert {
+    @apply px-4 py-3 rounded border mb-4;
+}
+
+.alert-success {
+    @apply bg-green-100 border-green-400 text-green-700;
+}
+
+.alert-error {
+    @apply bg-red-100 border-red-400 text-red-700;
+}
+
+.alert-warning {
+    @apply bg-yellow-100 border-yellow-400 text-yellow-700;
+}
+
+.alert-info {
+    @apply bg-blue-100 border-blue-400 text-blue-700;
+}
+
+/* Badge styles */
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-primary {
+    @apply bg-primary text-white;
+}
+
+.badge-secondary {
+    @apply bg-gray-100 text-gray-800;
+}
+
+.badge-success {
+    @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-danger {
+    @apply bg-red-100 text-red-800;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+    .table-responsive {
+        @apply block overflow-x-auto whitespace-nowrap;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #10B981;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #059669;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+    outline: 2px solid #10B981;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+    @apply absolute -top-10 left-6 bg-primary text-white px-4 py-2 rounded-md focus:top-6 z-50 transition-all;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        @apply bg-white text-black;
+    }
+    
+    .card {
+        @apply border border-gray-300;
+    }
+}
